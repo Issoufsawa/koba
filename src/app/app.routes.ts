@@ -6,5 +6,5 @@ import { SingleservicesComponent } from './singleservices/singleservices.compone
 export const routes: Routes = [
     {path : 'services' , component : ServicesComponent},
     {path : '' , component :AccueilComponent},
-    {path: 'singlesservices', component : SingleservicesComponent}
+    {path: 'singleservices', component : SingleservicesComponent}
 ];
