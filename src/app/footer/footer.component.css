@@ -1,6 +1,6 @@
 header{
     background-color: hsl(0, 0%, 100%);
-    padding: 20px 50px;
+    /* padding: 20px 50px; */
     flex-direction: row;
   }
   a:hover {
@@ -21,3 +21,20 @@ header{
     justify-content: space-between;
   }
   
+  nav.color {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #454555;
+    margin: auto;
+    padding: 20px 50px;
+  
+  }
+  
+nav.color h1,h2  {
+  color: aliceblue;
+  }
+.loca{
+  color:aliceblue;
+}

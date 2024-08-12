@@ -1,15 +1,20 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Services } from '../models/services';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-services',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink,RouterOutlet ],
   templateUrl: './services.component.html',
   styleUrl: './services.component.css'
 })
 export class ServicesComponent implements OnInit{
+  constructor(private router: Router) { }
+
+  onContinue() {
+    this.router.navigateByUrl('singleservices');
+}
   @Input() services!: Services;
   monServices!: Services;
   monServices1!: Services;
