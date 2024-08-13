@@ -15,6 +15,18 @@ export class ServicesComponent implements OnInit{
   onContinue() {
     this.router.navigateByUrl('singleservices');
 }
+
+onContinue2() {
+  this.router.navigateByUrl('stores');
+}
+
+onContinue3() {
+  this.router.navigateByUrl('rampes-escalier');
+}
+
+onContinue4() {
+  this.router.navigateByUrl('portail');
+}
   @Input() services!: Services;
   monServices!: Services;
   monServices1!: Services;

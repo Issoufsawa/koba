@@ -1,0 +1,5 @@
+img {
+    width: 100%; /* La largeur s'adaptera au conteneur parent */
+    height: auto;
+  }
+  
