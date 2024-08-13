@@ -15,6 +15,15 @@ export class ServicesComponent implements OnInit{
   onContinue() {
     this.router.navigateByUrl('singleservices');
 }
+onEscalier() {
+  this.router.navigateByUrl('escalier');
+}
+onPortes() {
+  this.router.navigateByUrl('portes');
+}
+onStore() {
+  this.router.navigateByUrl('store');
+}
   @Input() services!: Services;
   monServices!: Services;
   monServices1!: Services;
@@ -32,7 +41,7 @@ export class ServicesComponent implements OnInit{
    new Date()
   );
   this.monServices1 = new Services (
-    'STORE BANNE DE TERRASSE',
+    'STORE ET BALCON METALLIQUE',
   'Mon meilleur ami depuis toujours !',
  'https://scontent.fabj3-2.fna.fbcdn.net/v/t39.30808-6/316949846_131032423119807_3219545559173287574_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=l4Kp_ER9u_YQ7kNvgGm0mX2&_nc_ht=scontent.fabj3-2.fna&oh=00_AYDCU8TBpxZ5x3dqqX84ENCzYRl4Q5gpHObnR35CaWoeRw&oe=66BB010E',
  new Date()
