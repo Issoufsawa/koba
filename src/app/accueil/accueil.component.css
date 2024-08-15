@@ -1,5 +1,5 @@
 section {
-    padding: 80px;
+    padding: 20px;
     
   }
   .accueil-introduction {
@@ -8,6 +8,7 @@ section {
     width: 60%;
     align-items: flex-start;
     margin: auto;
+    justify-content: space-between;
   }
   
   .accueil-introduction h1 {
@@ -77,4 +78,5 @@ section {
     justify-content: center;
     margin-bottom: 15px;
   }
+  
   
