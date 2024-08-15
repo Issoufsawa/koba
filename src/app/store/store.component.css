@@ -1,0 +1,34 @@
+
+
+.card-container{
+    margin: auto;
+    position: center;
+    margin: center;
+    /* padding: 3em; */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* margin-top: 100px; */
+    background-color: rgb(206, 201, 201);
+   
+}
+.description{
+    background-color: rgb(206, 201, 201);
+    /* position: center; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.titre-description{
+    background-color: rgb(206, 201, 201);
+    /* position: center; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+

@@ -1,8 +1,9 @@
 
 header{
   background-color: hsl(0, 0%, 100%);
-  padding: 20px 50px;
+  /* padding: 20px 50px; */
   flex-direction: row;
+  
 }
 a:hover {
     text-decoration: underline;
@@ -15,9 +16,48 @@ a{
     margin-left: 30px;
   }
   
-nav {
+nav  {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding: 10px 10px;
+  margin: auto;
+  
+}
+nav.color {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #454555;
+  margin: auto;
+  padding: 20px 50px;
+
+}
+
+
+a {
+  margin: 0 10px;
+  color: #333;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.active {
+  color: #666;
+  text-decoration: underline;
+}
+
+nav.color h1,h2 {
+color: aliceblue;
+}
+
+
+nav{
+ 
+padding: 10px;
+height: 100px;
 }
