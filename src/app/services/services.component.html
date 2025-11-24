@@ -1,40 +1,74 @@
-
-
-
-
-   <div  class="card-container ">
-<div class="card">
-    <img [src]=" monServices.imageUrl" [alt]="monServices.title" >
-    <div class="card-content">
-      <h1 class="card-title"> {{ monServices.title }}</h1>
-      
-      <button (click)="onContinue()" class="card-button"> Lire plus </button>
-    </div>
+<div class="services-container" [@fadeInUp]>
+  <!-- Header Section -->
+  <div class="services-header">
+    <h1 class="services-title">Nos Services</h1>
   </div>
-  <div class="card">
-    <img [src]=" monServices1.imageUrl" [alt]="monServices1.title" >
-     <div class="card-content">
-       <h1 class="card-title">{{ monServices1.title }}</h1>
-       
-       <button (click)="onStore()" class="card-button"> Lire plus </button> </div>
-   </div>
-   <div class="card">
-    <img [src]=" monServices2.imageUrl" [alt]="monServices2.title" >
-     <div class="card-content">
-       <h1 class="card-title">{{ monServices2.title }}</h1>
-      
-       <button (click)="onEscalier()" class="card-button"> Lire plus </button>
+
+  <!-- Dashboard Section -->
+  <section class="dashboard-section" [@fadeInUp]>
+    <app-dashboard></app-dashboard>
+  </section>
+
+  <!-- Services Cards Section -->
+  <section class="services-section">
+    <div class="card-container" [@staggerCards]="true">
+      <!-- Restaurant Card -->
+      <div class="card" [@fadeInUp] (mouseenter)="isHovered = 0" (mouseleave)="isHovered = -1">
+        <div class="card-image-wrapper">
+          <img [src]="monServices.imageUrl" [alt]="monServices.title" class="card-image">
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">{{ monServices.title }}</h2>
+          <p class="card-description">{{ monServices.description }}</p>
+          <button (click)="onContinue()" class="card-button">Lire plus</button>
+        </div>
       </div>
-   </div>
-   <div class="card">
-    <img [src]=" monServices3.imageUrl" [alt]="monServices3.title" >
-     <div class="card-content">
-       <h1 class="card-title">{{ monServices3.title }}</h1>
-      
-       <button (click)="onPortes()" class="card-button"> Lire plus </button>
-           </div>
-   </div>
-   
-  </div>
 
+      <!-- Store Card -->
+      <div class="card" [@fadeInUp] (mouseenter)="isHovered = 1" (mouseleave)="isHovered = -1">
+        <div class="card-image-wrapper">
+          <img [src]="monServices1.imageUrl" [alt]="monServices1.title" class="card-image">
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">{{ monServices1.title }}</h2>
+          <p class="card-description">{{ monServices1.description }}</p>
+          <button (click)="onStore()" class="card-button">Lire plus</button>
+        </div>
+      </div>
+
+      <!-- Stairs Card -->
+      <div class="card" [@fadeInUp] (mouseenter)="isHovered = 2" (mouseleave)="isHovered = -1">
+        <div class="card-image-wrapper">
+          <img [src]="monServices2.imageUrl" [alt]="monServices2.title" class="card-image">
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">{{ monServices2.title }}</h2>
+          <p class="card-description">{{ monServices2.description }}</p>
+          <button (click)="onEscalier()" class="card-button">Lire plus</button>
+        </div>
+      </div>
+
+      <!-- Doors Card -->
+      <div class="card" [@fadeInUp] (mouseenter)="isHovered = 3" (mouseleave)="isHovered = -1">
+        <div class="card-image-wrapper">
+          <img [src]="monServices3.imageUrl" [alt]="monServices3.title" class="card-image">
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">{{ monServices3.title }}</h2>
+          <p class="card-description">{{ monServices3.description }}</p>
+          <button (click)="onPortes()" class="card-button">Lire plus</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Drag Section -->
+  <section class="drag-section" [@fadeInUp]>
+    <app-drag></app-drag>
+  </section>
+</div>
 

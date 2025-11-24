@@ -1,0 +1,30 @@
+<div class="home-container" [@fadeIn]>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">Bienvenue</h1>
+      <p class="hero-subtitle">Découvrez nos services exceptionnels</p>
+    </div>
+  </section>
+
+  <!-- Services Preview -->
+  <section class="services-preview">
+    <h2 class="section-title">Nos Services</h2>
+    <div class="services-grid">
+      <div class="service-card" *ngFor="let service of services" [@fadeIn]>
+        <div class="service-icon">{{ service.icon }}</div>
+        <h3 class="service-title">{{ service.title }}</h3>
+        <p class="service-desc">{{ service.description }}</p>
+        <a [routerLink]="service.link" class="service-link">
+          Découvrir <span>→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <h2>Prêt à explorer ?</h2>
+    <a routerLink="/services" class="cta-button">Voir tous les services</a>
+  </section>
+</div>

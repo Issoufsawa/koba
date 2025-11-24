@@ -1,0 +1,27 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <a routerLink="/" class="navbar-logo">🏢 Koba</a>
+    <div class="navbar-menu" [class.active]="isMenuOpen">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link">
+        Accueil
+      </a>
+      <a routerLink="/services" routerLinkActive="active" class="nav-link">
+        Services
+      </a>
+    </div>
+
+    <!-- Theme Selector -->
+    <div class="theme-selector">
+      <button 
+        *ngFor="let theme of themes" 
+        (click)="setTheme(theme)" 
+        class="theme-btn"
+        [class.active]="currentTheme === theme"
+        [title]="theme">
+        {{ theme === 'light' ? '☀️' : theme === 'dark' ? '🌙' : theme === 'ocean' ? '🌊' : '🌲' }}
+      </button>
+    </div>
+
+    <button (click)="toggleMenu()" class="navbar-toggle">☰</button>
+  </div>
+</nav>

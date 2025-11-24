@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="general">
+    <span class="title1">NOTE GÉNÉRALE:</span>
+    <div class="star-avis">
+      <div class="stars">
+        <div class="v3_751" *ngFor="let star of stars"></div>
+      </div>
+    </div>
+    <span class="averageRating">{{ averageRating }} / 5</span>
+  </div>
+
+  <div class="comments-section" *ngIf="comments.length > 0">
+    <div class="comment" *ngFor="let comment of comments">
+      <span class="customers">
+        Mr {{ comment.customer.name }} {{ comment.customer.firstname }} 
+        ({{ comment.createdDate | date:'dd/MM/yyyy' }})
+      </span>
+      <div class="comment-stars">
+        <ng-container *ngFor="let star of comment.stars">
+          <i class="fa-solid fa-star" [style.color]="star"></i>
+        </ng-container>
+      </div>
+      <span class="description">{{ comment.description }}</span>
+    </div>
+  </div>
+</div>

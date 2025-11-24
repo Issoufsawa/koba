@@ -1,82 +1,121 @@
-section {
-    padding: 20px;
-    
-  }
-  .accueil-introduction {
-    display: flex;
-    flex-direction: row;
-    width: 60%;
-    align-items: flex-start;
-    margin: auto;
-    justify-content: space-between;
-  }
-  
-  .accueil-introduction h1 {
-    margin-bottom: 15px;
-  }
-  
-  .accueil-introduction p {
-    margin-bottom: 30px;
-  }
-  
-  .accueil-introduction div {
-    padding-right: 80px;
-  }
-  .cta {
-    display: inline-block;
-    background: linear-gradient(#8e86b5, #acaeed);
-    color: white;
-    border-radius: 50px;
-    padding: 20px 30px;
-  }
-  a {
-    color: #242424;
-    text-decoration: none;
-  }
-  
-  em {
-    color: #a5b4fc;
+.general-title{
+  /* Avis et Commentaires */
+    position: absolute;
+    width: 204px;
+    height: 21px;
+    left: 546px;
+    top: 1232px;
+    font-family: 'Outfit';
     font-style: normal;
-  }
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.container{
+    /* Frame 99 */
+    position: absolute;
+    width: 622px;
+    height: 164px;
+    left: 538px;
+    top: 1278px;
+    overflow-y: scroll;
+    background: #3C5873;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.09);
+    border-radius: 15px;
+}
+.general{
   
-  h1 {
-    font-size: 3.5em;
-    color: #a5b4fc;
-    font-family: 'Montserrat', sans-serif;
+}
+.star-avis{
+    /* Group 40 */
+    position: absolute;
+    width: 117px;
+    height: 17px;
+    left: 60px;
+    top: 13px;
+}
+.title1{
+  /* Note generale : */
+    position: absolute;
+    width: 85px;
+    height: 13px;
+    left: 33px;
+    top: 17px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 13px;
+    /* identical to box height */
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.avis{
+  /* (14 avis) */
+    position: absolute;
+    width: 29px;
+    height: 10px;
+    left: 89px;
+    top: 13px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 10px;
+    /* identical to box height */
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+.comment{
+  /* Group 38 */
+    position: absolute;
+    width: 552px;
+    height: 48px;
+    left: 33px;
+    top: 30px;
+}
+.title2{
+    /* Mr Ismael Bakayoko (23/07/2024) */
+    position: absolute;
+    width: 219.69px;
+    height: 18.91px;
+    left: 35px;
+    top: 50px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 13px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+.star2{
+    /* Group 31 */
+      position: absolute;
+      width: 77.86px;
+      height: 16px;
+      left: 195px;
+      top: 50px;
   }
-  
-  h2 {
-    color: #f9f8ff;
-  }
-  p,
-  li {
-    font-size: 1.1em;
-    color: #f9f8ff;
-  }
-  .body {
-    font-family: 'Manrope', sans-serif;
-    font-size: 1em;
-    background-color: #454555;
-    margin: 0;
-  }
-  
-  .accueil-photos {
-    background-color: white;
-    padding: 80px;
-  }
-  
-  .accueil-photos h2 {
-    color: #242424;
-    text-align: center;
-    margin-bottom: 80px;
-  }
-  
-  .accueil-photos div {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    justify-content: center;
-    margin-bottom: 15px;
-  }
-  
-  
+.content{
+  /* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Donec euismod, nisi eu facilisis fringilla, est lacus laoreet justo, et */
+    position: absolute;
+    width: 552px;
+    height: 29.09px;
+    left: 35px;
+    top: 68.91px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 10px;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.5);
+}
+.general2{
+ display: flex;
+}
+
