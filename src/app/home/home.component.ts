@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { trigger, transition, style, animate } from '@angular/animations';
+import { trigger, transition, style, animate, stagger, query } from '@angular/animations';
 
 @Component({
   selector: 'app-home',
@@ -15,38 +15,55 @@ import { trigger, transition, style, animate } from '@angular/animations';
         style({ opacity: 0, transform: 'translateY(20px)' }),
         animate('800ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
       ])
+    ]),
+    trigger('staggerCards', [
+      transition('* => *', [
+        query(':enter', [
+          style({ opacity: 0, transform: 'translateY(20px)' }),
+          stagger(100, [
+            animate('500ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
+          ])
+        ], { optional: true })
+      ])
     ])
   ]
 })
 export class HomeComponent {
   services = [
     {
-      id: 'restaurants',
-      title: 'Restaurants',
-      description: 'Découvrez nos meilleurs restaurants partenaires',
-      icon: '🍽️',
-      link: '/services/restaurants'
+      id: 'structures',
+      title: 'Structures Métalliques',
+      description: 'Conception et fabrication de structures métalliques pour tous types de projets',
+      icon: '⚙️',
+      link: '/services'
     },
     {
-      id: 'stores',
-      title: 'Magasins',
-      description: 'Explorez notre collection de magasins',
-      icon: '🏪',
-      link: '/services/stores'
+      id: 'aluminium',
+      title: 'Ouvrages en Aluminium',
+      description: 'Fabrication d\'ouvrages en aluminium de haute qualité et durabilité',
+      icon: '🏗️',
+      link: '/services'
     },
     {
-      id: 'stairs',
-      title: 'Escaliers',
-      description: 'Services premium d\'escalier',
-      icon: '📐',
-      link: '/services/stairs'
+      id: 'construction',
+      title: 'Construction',
+      description: 'Interventions sur divers projets de construction résidentiels et commerciaux',
+      icon: '🏢',
+      link: '/services'
     },
     {
-      id: 'doors',
-      title: 'Portes',
-      description: 'Solutions de portes innovantes',
-      icon: '🚪',
-      link: '/services/doors'
+      id: 'consultation',
+      title: 'Consultation',
+      description: 'Expertise et conseil technique pour vos projets de construction',
+      icon: '💡',
+      link: '/services'
     }
+  ];
+
+  stats = [
+    { number: '15+', label: 'Années d\'expérience' },
+    { number: '300+', label: 'Projets réalisés' },
+    { number: '100%', label: 'Clients satisfaits' },
+    { number: '30+', label: 'Équipe professionnelle' }
   ];
 }

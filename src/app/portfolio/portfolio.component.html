@@ -1,0 +1,45 @@
+<div class="portfolio-container">
+  <!-- Header -->
+  <section class="portfolio-header" [@fadeIn]>
+    <h1>Notre Portfolio</h1>
+    <p>Découvrez nos réalisations en structures métalliques et ouvrages en aluminium</p>
+  </section>
+
+  <!-- Filter -->
+  <section class="filter-section">
+    <div class="filter-buttons">
+      <button 
+        *ngFor="let category of categories"
+        (click)="filterByCategory(category)"
+        [class.active]="selectedCategory === category"
+        class="filter-btn">
+        {{ category === 'tous' ? 'Tous les projets' : category === 'structures' ? 'Structures Métalliques' : 'Ouvrages Aluminium' }}
+      </button>
+    </div>
+  </section>
+
+  <!-- Projects Grid -->
+  <section class="projects-section">
+    <div class="projects-grid" [@staggerCards]="selectedCategory">
+      <div class="project-card" *ngFor="let project of filteredProjects" [@fadeIn]>
+        <div class="project-image">{{ project.image }}</div>
+        <div class="project-content">
+          <span class="project-category">{{ project.category === 'structures' ? 'Structures Métalliques' : 'Ouvrages Aluminium' }}</span>
+          <h3 class="project-title">{{ project.title }}</h3>
+          <p class="project-desc">{{ project.description }}</p>
+          <div class="project-footer">
+            <span class="project-year">{{ project.year }}</span>
+            <a href="#" class="project-link">Détails →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" [@fadeIn]>
+    <h2>Vous avez un projet en vue ?</h2>
+    <p>Nous serions ravis de collaborer avec vous</p>
+    <a href="/contact" class="cta-button">Contactez-nous</a>
+  </section>
+</div>

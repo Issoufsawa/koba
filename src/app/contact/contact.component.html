@@ -1,0 +1,105 @@
+<div class="contact-container">
+  <!-- Header -->
+  <section class="contact-header" [@fadeIn]>
+    <h1>Contactez-Nous</h1>
+    <p>Nous sommes à l'écoute de vos besoins</p>
+  </section>
+
+  <!-- Contact Info & Form -->
+  <section class="contact-content">
+    <!-- Info Cards -->
+    <div class="contact-info">
+      <h2>Informations</h2>
+      <div class="info-grid">
+        <div class="info-card" *ngFor="let info of contactInfo" [@fadeIn]>
+          <div class="info-icon">{{ info.icon }}</div>
+          <h3>{{ info.title }}</h3>
+          <a [href]="info.link" class="info-link">{{ info.value }}</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form-wrapper" [@fadeIn]>
+      <h2>Formulaire de Contact</h2>
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+        <div class="form-group">
+          <label for="name">Nom complet *</label>
+          <input 
+            type="text" 
+            id="name" 
+            formControlName="name"
+            [class.error]="submitted && name?.invalid"
+            placeholder="Votre nom">
+          <span class="error-message" *ngIf="submitted && name?.invalid">
+            Le nom est requis (minimum 3 caractères)
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input 
+            type="email" 
+            id="email" 
+            formControlName="email"
+            [class.error]="submitted && email?.invalid"
+            placeholder="Votre email">
+          <span class="error-message" *ngIf="submitted && email?.invalid">
+            Veuillez entrer un email valide
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Téléphone *</label>
+          <input 
+            type="tel" 
+            id="phone" 
+            formControlName="phone"
+            [class.error]="submitted && phone?.invalid"
+            placeholder="Votre téléphone">
+          <span class="error-message" *ngIf="submitted && phone?.invalid">
+            Le téléphone est requis
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Sujet *</label>
+          <input 
+            type="text" 
+            id="subject" 
+            formControlName="subject"
+            [class.error]="submitted && subject?.invalid"
+            placeholder="Sujet de votre demande">
+          <span class="error-message" *ngIf="submitted && subject?.invalid">
+            Le sujet est requis
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea 
+            id="message" 
+            formControlName="message"
+            [class.error]="submitted && message?.invalid"
+            placeholder="Décrivez votre demande..."
+            rows="5"></textarea>
+          <span class="error-message" *ngIf="submitted && message?.invalid">
+            Le message doit contenir au moins 10 caractères
+          </span>
+        </div>
+
+        <button type="submit" class="submit-btn" [disabled]="loading">
+          {{ loading ? '⏳ Envoi en cours...' : '📤 Envoyer le Message' }}
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Map Section (Optional) -->
+  <section class="map-section" [@fadeIn]>
+    <h2>Nos Locaux</h2>
+    <div class="map-placeholder">
+      📍 Conakry, Guinée
+    </div>
+  </section>
+</div>

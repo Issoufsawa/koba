@@ -1,11 +1,6 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ServicesComponent } from './services/services.component';
-import { AccueilComponent } from './accueil/accueil.component';
-import { SingleservicesComponent } from './singleservices/singleservices.component';
-import { EscalierComponent } from './escalier/escalier.component';
-import { PortesComponent } from './portes/portes.component';
-import { StoreComponent } from './store/store.component';
 
 export const routes: Routes = [
   {
@@ -17,8 +12,16 @@ export const routes: Routes = [
     component: ServicesComponent
   },
   {
-    path: 'services/:type',
-    component: ServicesComponent
+    path: 'portfolio',
+    loadComponent: () => import('./portfolio/portfolio.component').then(m => m.PortfolioComponent)
+  },
+  {
+    path: 'about',
+    loadComponent: () => import('./about/about.component').then(m => m.AboutComponent)
+  },
+  {
+    path: 'contact',
+    loadComponent: () => import('./contact/contact.component').then(m => m.ContactComponent)
   },
   {
     path: '**',

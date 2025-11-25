@@ -1,30 +1,71 @@
-<div class="home-container" [@fadeIn]>
+<div class="home-container">
   <!-- Hero Section -->
   <section class="hero-section">
-    <div class="hero-content">
-      <h1 class="hero-title">Bienvenue</h1>
-      <p class="hero-subtitle">Découvrez nos services exceptionnels</p>
+    <div class="hero-content" [@fadeIn]>
+      <h1 class="hero-title">KOBA</h1>
+      <p class="hero-subtitle">Conception et Fabrication de Structures Métalliques et Ouvrages en Aluminium</p>
+      <div class="hero-buttons">
+        <a routerLink="/services" class="btn btn-primary">Nos Services</a>
+        <a routerLink="/portfolio" class="btn btn-secondary">Nos Réalisations</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="hero-placeholder">🏭</div>
     </div>
   </section>
 
-  <!-- Services Preview -->
-  <section class="services-preview">
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="stats-grid" [@staggerCards]="true">
+      <div class="stat-card" *ngFor="let stat of stats" [@fadeIn]>
+        <div class="stat-number">{{ stat.number }}</div>
+        <div class="stat-label">{{ stat.label }}</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="about-content" [@fadeIn]>
+      <div class="about-text">
+        <h2>À Propos de KOBA</h2>
+        <p>
+          KOBA est une entreprise spécialisée dans la conception et la fabrication de structures métalliques
+          et d'ouvrages en aluminium. Basée à Abidjan-Marcory Anoumabo, elle intervient sur divers projets
+          de construction.
+        </p>
+        <p>
+          Notre expertise combinée à nos moyens techniques modernes nous permet de réaliser vos projets
+          les plus complexes avec excellence, respect des délais et qualité irréprochable. Nous travaillons
+          avec des clients résidentiels et industriels pour transformer leurs visions en réalités.
+        </p>
+        <a routerLink="/about" class="link-more">En savoir plus →</a>
+      </div>
+      <div class="about-image">
+        <div class="image-placeholder">🏗️</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-section">
     <h2 class="section-title">Nos Services</h2>
-    <div class="services-grid">
+    <div class="services-grid" [@staggerCards]="true">
       <div class="service-card" *ngFor="let service of services" [@fadeIn]>
         <div class="service-icon">{{ service.icon }}</div>
         <h3 class="service-title">{{ service.title }}</h3>
         <p class="service-desc">{{ service.description }}</p>
-        <a [routerLink]="service.link" class="service-link">
-          Découvrir <span>→</span>
-        </a>
+        <a [routerLink]="service.link" class="service-link">Découvrir →</a>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
   <section class="cta-section">
-    <h2>Prêt à explorer ?</h2>
-    <a routerLink="/services" class="cta-button">Voir tous les services</a>
+    <div class="cta-content" [@fadeIn]>
+      <h2>Prêt pour votre projet ?</h2>
+      <p>Contactez-nous aujourd'hui pour une consultation gratuite</p>
+      <a routerLink="/contact" class="btn btn-primary btn-large">Demander un Devis</a>
+    </div>
   </section>
 </div>

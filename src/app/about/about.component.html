@@ -1,0 +1,90 @@
+<div class="about-container">
+  <!-- Header -->
+  <section class="about-header" [@fadeIn]>
+    <h1>À Propos de KOBA</h1>
+    <p>Leader en conception et fabrication de structures métalliques</p>
+  </section>
+
+  <!-- History -->
+  <section class="history-section" [@fadeIn]>
+    <div class="history-content">
+      <div class="history-text">
+        <h2>Notre Histoire</h2>
+        <p>
+          KOBA est une entreprise spécialisée dans la conception et la fabrication de structures métalliques 
+          et d'ouvrages en aluminium. Basée à Abidjan-Marcory Anoumabo, elle intervient sur divers projets 
+          de construction.
+        </p>
+        <p>
+          Depuis sa création, KOBA s'est imposée comme un partenaire de confiance pour les projets de construction 
+          les plus ambitieux. Notre engagement envers l'excellence, l'innovation et la fiabilité nous permet de 
+          transformer vos visions en structures durables et esthétiques.
+        </p>
+        <p>
+          Nous combinons expertise technique, moyens modernes et équipe qualifiée pour garantir la réussite de 
+          chaque projet, du plus simple au plus complexe.
+        </p>
+      </div>
+      <div class="history-image">🏗️</div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="values-section">
+    <h2>Nos Valeurs</h2>
+    <div class="values-grid">
+      <div class="value-card" *ngFor="let value of values" [@fadeIn]>
+        <div class="value-icon">{{ value.icon }}</div>
+        <h3>{{ value.title }}</h3>
+        <p>{{ value.description }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="team-section" [@fadeIn]>
+    <h2>Notre Équipe</h2>
+    <p class="section-subtitle">Des professionnels passionnés et expérimentés</p>
+    <div class="team-grid">
+      <div class="team-card" *ngFor="let member of team" [@fadeIn]>
+        <div class="team-icon">{{ member.icon }}</div>
+        <h3>{{ member.name }}</h3>
+        <p class="role">{{ member.role }}</p>
+        <p class="specialty">{{ member.specialty }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats-section" [@fadeIn]>
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-number">15+</div>
+        <div class="stat-text">Années d'expérience</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">300+</div>
+        <div class="stat-text">Projets réalisés</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">100%</div>
+        <div class="stat-text">Clients satisfaits</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">30+</div>
+        <div class="stat-text">Employés qualifiés</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="certifications-section" [@fadeIn]>
+    <h2>Certifications & Accréditations</h2>
+    <div class="certifications">
+      <div class="cert-item">✓ Entreprise agréée</div>
+      <div class="cert-item">✓ Normes ISO</div>
+      <div class="cert-item">✓ Assurance responsabilité civile</div>
+      <div class="cert-item">✓ Garantie décennale</div>
+    </div>
+  </section>
+</div>
