@@ -5,7 +5,30 @@ import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-contact',
-  templateUrl: './contact.component.html',
+  template: `
+    <section @fadeIn class="contact-section">
+      <h2>Contactez-nous</h2>
+
+      <div class="contact-grid">
+        <div *ngFor="let info of contactInfo" class="contact-card">
+          <div class="icon">{{ info.icon }}</div>
+          <div class="meta">
+            <div class="title">{{ info.title }}</div>
+            <a [href]="info.link">{{ info.value }}</a>
+          </div>
+        </div>
+      </div>
+
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate class="contact-form">
+        <input formControlName="name" placeholder="Nom" />
+        <input formControlName="email" placeholder="Email" />
+        <input formControlName="phone" placeholder="Téléphone" />
+        <input formControlName="subject" placeholder="Sujet" />
+        <textarea formControlName="message" placeholder="Message"></textarea>
+        <button type="submit" [disabled]="loading">{{ loading ? 'Envoi...' : 'Envoyer' }}</button>
+      </form>
+    </section>
+  `,
   styleUrls: ['./contact.component.css'],
   standalone: true,
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
@@ -39,7 +62,7 @@ export class ContactComponent {
     {
       icon: '📍',
       title: 'Adresse',
-      value: 'Conakry, Guinée',
+      value: 'Abidjan, Côte d\'Ivoire',
       link: '#'
     },
     {
